@@ -287,7 +287,7 @@ fieldset[disabled] .btn-m.active {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color: #f8d56f;
     /*color: #808080;*/
     -webkit-transition: all ease .35s;
     -moz-transition: all ease .35s;
@@ -370,7 +370,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('/img/backgrounds/header.gif'); 
+    background-image: url('/img/backgrounds/03_gruba.png'); 
     background-position: center center;
     /*background-position: top center;*/
     background-repeat: none;
@@ -394,6 +394,7 @@ header .intro-text .intro-lead-in {
     font-size: 22px;
     /*font-style: italic;*/
     line-height: 22px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 header .intro-text .intro-heading {
@@ -411,9 +412,9 @@ header .intro-text .intro-heading {
 @media(min-width:768px) {
 	header {
     text-align: center;
-    color: #fff;
+    color: #f8d56f;
     background-attachment: scroll;
-    background-image: url('/img/backgrounds/header.gif'); 
+    background-image: url('/img/backgrounds/03_gruba.png'); 
     /*background-position: center center;*/
     background-position: top center;
     background-repeat: none;
@@ -440,6 +441,7 @@ header .intro-text .intro-heading {
         font-size: 40px;
         /*font-style: italic;*/
         line-height: 40px;
+        text-shadow: 2px 2px 4px #000000;
     }
 
     header .intro-text .intro-heading {
