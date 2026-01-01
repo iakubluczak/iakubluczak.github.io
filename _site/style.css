@@ -370,7 +370,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('/img/backgrounds/03_gruba.png'); 
+    /* background-image: url('/img/backgrounds/03_gruba.png');  */
     background-position: center center;
     /*background-position: top center;*/
     background-repeat: none;
@@ -414,7 +414,7 @@ header .intro-text .intro-heading {
     text-align: center;
     color: #f8d56f;
     background-attachment: scroll;
-    background-image: url('/img/backgrounds/03_gruba.png'); 
+    /* background-image: url('/img/backgrounds/03_gruba.png');  */
     /*background-position: center center;*/
     background-position: top center;
     background-repeat: none;
