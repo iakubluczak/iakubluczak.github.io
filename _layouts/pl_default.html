@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  {% include en_data/head.html %}
+
+
+    <body id="page-top" class="index">
+
+    {% include pl_data/header.html %}
+    {% include pl_data/events.html %}
+    {% include pl_data/venue.html %}
+    {% include pl_data/wedding_party_venue.html %}
+    {% include pl_data/accommodation.html %}
+    {% include pl_data/our_wishes.html %}
+    {% include pl_data/survey_link.html %}
+    {% include pl_data/FAQ.html %}
+    {% include pl_data/footer.html %}
+    {% include en_data/modals.html %}
+    {% include en_data/js.html %}
+    {% if jekyll.environment == 'production' %}
+        {% include analytics.html %}
+    {% endif %}
+
+    </body>
+</html>
