@@ -260,7 +260,7 @@ fieldset[disabled] .btn-m.active {
 }
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: #faf7f2;
     padding-top: 10px;
     padding-left: 10px;
 }
@@ -350,6 +350,59 @@ fieldset[disabled] .btn-m.active {
 /* Logo w nawigacji – bez zbędnego paddingu */
 .navbar-header .brand {
     padding-top: 0;
+}
+
+/* Mobile: logo i PL/EN po lewej, hamburger po prawej, wszystko wyrównane pionowo */
+@media (max-width: 767px) {
+    .navbar .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    /* Rozwinięte menu w całości poniżej paska (nie z boku) */
+    .navbar-collapse {
+        width: 100%;
+        order: 2;
+    }
+
+    .navbar-header {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Kolejność wizualna: najpierw logo + przyciski języka (lewa strona), potem hamburger (prawa) */
+    .navbar-header > span {
+        display: inline-flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        order: -1;
+    }
+
+    .navbar-header .navbar-toggle {
+        order: 1;
+    }
+
+    .navbar-header .brand,
+    .navbar-header .btn-m {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Inicjały w pełnym rozmiarze, lekko obniżone względem przycisków PL/EN */
+    .navbar-header .brand-logo {
+        margin-top: 0;
+        /* Rozmiar jak na desktop (bez ograniczenia 38px) */
+    }
+
+    /* Obniżenie inicjałów względem przycisków PL/EN */
+    .navbar-header .brand {
+        align-self: flex-end;
+        margin-top: 14px;
+    }
 }
 
 /* Wyrównanie pionowe lewej i prawej części headera oraz większy odstęp między nimi */
@@ -491,6 +544,7 @@ header .intro-text .intro-lead-in {
     font-size: 22px;
     /*font-style: italic;*/
     line-height: 22px;
+    color: #650015;
 }
 
 header .intro-text .intro-heading {
