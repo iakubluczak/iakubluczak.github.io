@@ -1,10 +1,40 @@
+---
+permalink: /
+---
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
-    <meta http-equiv="refresh" content="0; url=/pl/">
-    <link rel="canonical" href="/pl/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
+    <noscript><meta http-equiv="refresh" content="0; url={{ site.baseurl }}/pl/"></noscript>
 </head>
-<body>
-    <p>Przekierowanie do <a href="/pl/">polskiej wersji</a>...</p>
+<body style="background-color: #faf7f2; font-family: 'Ibarra Real Nova', Georgia, serif; color: #3b3b3b; text-align: center; padding: 3rem;">
+    <p>Przekierowanie do <a href="{{ site.baseurl }}/pl/">strony głównej</a>...</p>
+    <script>
+(function() {
+    var BASEURL = "{{ site.baseurl }}";
+    var COOKIE_NAME = "lang";
+    var COOKIE_MAX_AGE = 365 * 24 * 60 * 60;
+
+    function getCookie(name) {
+        var v = document.cookie.match("(?:^|;)\\s*" + name + "=([^;]*)");
+        return v ? v.pop() : null;
+    }
+
+    function setCookie(name, value) {
+        document.cookie = name + "=" + value + "; path=/; max-age=" + COOKIE_MAX_AGE + "; SameSite=Lax";
+    }
+
+    var lang = getCookie(COOKIE_NAME);
+    if (lang === "en") {
+        window.location.replace(BASEURL + "/en/");
+        return;
+    }
+    setCookie(COOKIE_NAME, "pl");
+    window.location.replace(BASEURL + "/pl/");
+})();
+    </script>
 </body>
 </html>

@@ -15,3 +15,22 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ site.baseurl }}/js/agency.js"></script>
+
+<!-- Zapis wyboru języka w ciasteczku przy przełączaniu PL/EN -->
+<script>
+(function() {
+    var COOKIE_NAME = "lang";
+    var COOKIE_MAX_AGE = 365 * 24 * 60 * 60;
+    function setCookie(name, value) {
+        document.cookie = name + "=" + value + "; path=/; max-age=" + COOKIE_MAX_AGE + "; SameSite=Lax";
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelectorAll("a.btn-m[href*='/pl/'], a.btn-m[href*='/en/']").forEach(function(a) {
+            a.addEventListener("click", function() {
+                if (this.getAttribute("href").indexOf("/pl/") !== -1) setCookie(COOKIE_NAME, "pl");
+                else if (this.getAttribute("href").indexOf("/en/") !== -1) setCookie(COOKIE_NAME, "en");
+            });
+        });
+    });
+})();
+</script>
